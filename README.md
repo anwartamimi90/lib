@@ -1,6 +1,8 @@
 ## Library Management
 
-Lib Manage
+Library Management 
+
+BY: Anwar H Altamimi
 
 #### License
 
