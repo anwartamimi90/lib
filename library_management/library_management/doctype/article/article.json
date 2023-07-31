@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:article_name",
+ "autoname": "Article.###",
  "creation": "2023-07-23 21:55:51.586694",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,11 +9,12 @@
  "field_order": [
   "article_name",
   "image",
-  "author",
   "description",
   "isbn",
   "status",
-  "publisher"
+  "publisher",
+  "author",
+  "author_link"
  ],
  "fields": [
   {
@@ -31,8 +32,9 @@
   },
   {
    "fieldname": "author",
-   "fieldtype": "Data",
-   "label": "Author"
+   "fieldtype": "Table",
+   "label": "Author",
+   "options": "Article Author"
   },
   {
    "fieldname": "description",
@@ -54,11 +56,17 @@
    "fieldname": "publisher",
    "fieldtype": "Data",
    "label": "Publisher"
+  },
+  {
+   "fieldname": "author_link",
+   "fieldtype": "Link",
+   "label": "Author Link",
+   "options": "Author"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-23 22:03:58.697734",
+ "modified": "2023-07-29 21:14:11.163843",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
@@ -73,6 +81,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Blogger",
    "share": 1,
    "write": 1
   }
